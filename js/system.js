@@ -1,6 +1,6 @@
 let i_System = {
 	rootDir:'/lotto',
-	loadScriptType:'defer', // 스크립트 로드 타입
+	loadScriptType:'async', // 스크립트 로드 타입 async defer
 	loadScriptInHead:[], // 스크립트 로드 head
 	loadScript:[], // 스크립트 로드 body
 	loadCss:[], // Css 로드 body
@@ -12,7 +12,7 @@ let i_System = {
 	 */
 	createScriptHtml:function(src){
 		let _this = this;
-		let loadType = _this.loadScriptType = 'defer';
+		let loadType = _this.loadScriptType;
 		let newScript = document.createElement('script');
 		newScript.setAttribute('src', src);
 		newScript.setAttribute('crossorigin', 'anonymous');
