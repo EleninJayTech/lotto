@@ -36,7 +36,6 @@ let i_System = {
 // document ready
 document.addEventListener("DOMContentLoaded", function(){
 	i_System.loadScriptInHead.push(`${i_System.rootDir}/plugin/jquery.min.js`);
-	i_System.loadScriptInHead.push(`${i_System.rootDir}/plugin/SemanticUI/semantic.min.js`);
 	i_System.loadScriptInHead.forEach(function(item, index, array){
 		let newScript = i_System.createScriptHtml(item);
 		document.getElementsByTagName('head')[0].appendChild(newScript);
@@ -51,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 // window load
 window.addEventListener('load', function(){
+	i_System.loadScript.push(`${i_System.rootDir}/plugin/SemanticUI/semantic.min.js`);
 	i_System.loadScript.push(`${i_System.rootDir}/js/common.js`);
 	i_System.loadScript.forEach(function(item, index, array){
 		let newScript = i_System.createScriptHtml(item);
