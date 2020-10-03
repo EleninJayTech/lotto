@@ -1,4 +1,5 @@
 let i_System = {
+	resourceVer:1,
 	rootDir:'/lotto',
 	loadScriptType:'async', // 스크립트 로드 타입 async defer
 	loadScriptInHead:[], // 스크립트 로드 head
@@ -14,6 +15,8 @@ let i_System = {
 		let _this = this;
 		let loadType = _this.loadScriptType;
 		let newScript = document.createElement('script');
+
+		src = src + `?${i_System.resourceVer}`;
 		newScript.setAttribute('src', src);
 		newScript.setAttribute('crossorigin', 'anonymous');
 		newScript.setAttribute(loadType, '');
@@ -21,12 +24,13 @@ let i_System = {
 	},
 
 	/**
-	 * 스크립트 HTML 생성
+	 * CSS HTML 생성
 	 * @param href
 	 * @returns {HTMLLinkElement}
 	 */
 	createStyleHtml:function(href){
 		let newStyle = document.createElement('link');
+		href = href + `?${i_System.resourceVer}`;
 		newStyle.setAttribute('href', href);
 		newStyle.setAttribute('rel', 'stylesheet');
 		return newStyle;
