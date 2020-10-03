@@ -1,5 +1,5 @@
 let i_System = {
-	resourceVer:1,
+	resourceVer:2,
 	rootDir:'/lotto',
 	loadScriptType:'async', // 스크립트 로드 타입 async defer
 	loadScriptInHead:[], // 스크립트 로드 head
