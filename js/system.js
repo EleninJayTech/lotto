@@ -1,5 +1,5 @@
 let i_System = {
-	resourceVer:3,
+	resourceVer:4,
 	rootDir:'/lotto',
 	loadScriptType:'async', // 스크립트 로드 타입 async defer
 	loadScriptInHead:[], // 스크립트 로드 head
@@ -61,3 +61,10 @@ window.addEventListener('load', function(){
 		document.getElementsByTagName('body')[0].appendChild(newScript);
 	});
 });
+
+// 로또 당첨 매장 확인 페이지
+// https://dhlottery.co.kr/store.do?method=topStore&pageGubun=L645&drwNo=880
+// 2등 배출점 페이징 &nowPage=2
+
+// 로또 당첨 api
+// https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=880
